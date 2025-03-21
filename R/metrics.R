@@ -2,14 +2,10 @@
 
 get_metrics <- function(prompt) {
     data <- suppressWarnings(as.numeric(readline(prompt)))
-    if (!is.na(data)) {
-        if (data >= 0) {
-            return(data)
-        } else {
-            cat("Invalid input. Please enter a non-negative number.\n")
-        }
+    if (!is.na(data) && (data >= 0)) {
+        return(data)
     } else {
-        cat("Invalid input. Please enter a number.\n")
+        cat("Invalid input. Please enter a non-negative number.\n")
     }
 }
 
