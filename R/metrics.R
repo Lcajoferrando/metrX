@@ -10,7 +10,34 @@ get_metrics <- function(prompt) {
   }
 }
 
-customer_retention <- get_metrics("Customers Retention: ")
-conversion_rate <- get_metrics("Total visitors: ", "Total conversions: ")
-customer_sat <- get_metrics("Customer Satisfaction: ")
-np_score <- get_metrics("Net Promoter Score: ")
+# Prompt the user to enter Customer Retention Rate metrics
+crr_prompts <- c(
+                 "Customers at start of the period: ",
+                 "Customers at the end of the period: ",
+                 "New customers acquired during the period: ")
+customer_retention_rate <- sapply(crr_prompts, get_metrics)
+
+# Prompt the user to enter Customer Churn Rate metrics
+ccr_prompts <- c(
+                 "Lost customers: ",
+                 "Total customers at start of period: ")
+customer_churn_rate <- sapply(ccr_prompts, get_metrics)
+
+# Prompt the user to enter Customer Conversion Rate metrics
+cco_prompts <- c(
+                 "Number of conversions: ",
+                 "Total number of leads: ")
+customer_conversion_rate <- sapply(cco_prompts, get_metrics)
+
+# Prompt the user to enter Customer Satisfaction Score metrics
+css_prompts <- c(
+                 "Number of positive responses: ",
+                 "Total number of responses: ")
+customer_satisfaction_score <- sapply(css_prompts, get_metrics)
+
+# Prompt the user to enter Net Promoter Score metrics
+nps_prompts <- c(
+                 "Number of promoters: ",
+                 "Number of detractors: ",
+                 "Number of passives: ")
+net_promoter_score <- sapply(nps_prompts, get_metrics)
