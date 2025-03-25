@@ -41,3 +41,26 @@ nps_prompts <- c(
                  "Number of detractors: ",
                  "Number of passives: ")
 net_promoter_score <- sapply(nps_prompts, get_metrics)
+
+# Extract the values from the vectors
+## Customer Retention Rate
+customer_retention_rate[[1]]
+customer_retention_rate[[2]]
+customer_retention_rate[[3]]
+
+## Customer Churn Rate
+customer_churn_rate[[1]]
+customer_churn_rate[[2]]
+
+## Customer Conversion Rate
+customer_conversion_rate[[1]]
+customer_conversion_rate[[2]]
+
+## Customer Satisfaction Score
+customer_satisfaction_score[[1]]
+customer_satisfaction_score[[2]]
+
+## Net Promoter Score
+net_promoter_score[[1]]
+net_promoter_score[[2]]
+net_promoter_score[[3]]
