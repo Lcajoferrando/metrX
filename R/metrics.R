@@ -64,3 +64,29 @@ customer_satisfaction_score[[2]]
 net_promoter_score[[1]]
 net_promoter_score[[2]]
 net_promoter_score[[3]]
+
+# Calculate the metrics
+# Customer Retention Rate
+c_retention_result <- ((customer_retention_rate[[2]] -
+                          customer_retention_rate[[3]]) /
+                         customer_retention_rate[[1]]) * 100
+cat("Customer Retention Rate: ", c_retention_results, "%\n")
+
+# Customer Churn Rate
+c_churn_rate <- (customer_churn_rate[[1]] /
+                   customer_churn_rate[[2]]) * 100
+cat("Customer Churn Rate: ", c_churn_rate, "%\n")
+
+# Customer Conversion Rate
+c_conversion_rate <- (customer_conversion_rate[[1]] /
+                        customer_conversion_rate[[2]]) * 100
+cat("Customer Conversion Rate: ", c_conversion_rate, "%\n")
+
+# Customer Satisfaction Score
+c_satisfaction_score <- (customer_satisfaction_score[[1]] /
+                           customer_satisfaction_score[[2]]) * 100
+cat("Customer Satisfaction Score: ", c_satisfaction_score, "%\n")
+
+# Net Promoter Score
+n_promoter_score <- ((net_promoter_score[[1]] - net_promoter_score[[2]])
+cat("Net Promoter Score: ", n_promoter_score, "%\n")
