@@ -1,8 +1,8 @@
-Package: metrics
+Package: metrX
 Title: Customer Success Metrics
-Description: Analyze Customer Success Metrics from the Domoblock's Referral Program
+Description: Analyze Customer Success Metrics
 Version: 1.0
 Authors@R: person("Lucia", "Cajo", email = lcajoferrando@gmail.com, role = c("aut", "cre", "cph"))
-License: GPL-3 + file LICENSE
+License: GNU (General Public License), Version 3 + file LICENSE
 RoxygenNote: 7.3.2
 Encoding: UTF-8
