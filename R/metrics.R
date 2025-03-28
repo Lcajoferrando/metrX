@@ -39,7 +39,7 @@ calculate_customer_churn_rate <- function() {
 
   return (customer_churn_rate)
 }
-cat ("Customer Churn Rate: ", calculate_customer_churn_rate(), "%\n")
+
 calculate_customer_conversion_rate <- function() {
   prompts <- c(
                "Number of conversions: ",
@@ -52,7 +52,7 @@ calculate_customer_conversion_rate <- function() {
   customer_conversion_rate <- (number_of_conversions /
                                  total_number_of_leads) * 100
 
-  cat("Customer Conversion Rate: ", customer_conversion_rate, "%\n")
+  return (customer_conversion_rate)
 }
 
 calculate_customer_satisfaction_score <- function() {
@@ -66,7 +66,7 @@ calculate_customer_satisfaction_score <- function() {
 
   customer_satisfaction_score <- (positive_responses / total_responses) * 100
 
-  cat("Customer Satisfaction Score: ", customer_satisfaction_score, "%\n")
+  return (customer_satisfaction_score)
 }
 
 calculate_net_promoter_score <- function() {
@@ -83,5 +83,12 @@ calculate_net_promoter_score <- function() {
   net_promoter_score <- (number_of_promoters / total_respondents) -
     (number_of_detractors / total_respondents) * 100
 
-  cat("Net Promoter Score: ", net_promoter_score, "%\n")
+  return (net_promoter_score)
 }
+
+cat("Customer Retention Rate: ", calculate_customer_retention(), "%\n")
+cat("Customer Churn Rate: ", calculate_customer_churn_rate(), "%\n")
+cat("Customer Conversion Rate: ", calculate_customer_conversion_rate(), "%\n")
+cat("Customer Satisfaction Score: ", calculate_customer_satisfaction_score(),
+    "%\n")
+cat("Net Promoter Score: ", calculate_net_promoter_score(), "%\n")
