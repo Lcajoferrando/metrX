@@ -23,7 +23,7 @@ calculate_customer_retention <- function() {
   customer_retention_rate <- ((customers_at_end - new_customers) /
                                 customers_at_start) * 100
 
-  cat("Customer Retention Rate: ", customer_retention_rate, "%\n")
+  return (customer_retention_rate)
 }
 
 calculate_customer_churn_rate <- function() {
@@ -37,9 +37,9 @@ calculate_customer_churn_rate <- function() {
 
   customer_churn_rate <- (lost_customers / total_customers) * 100
 
-  cat("Customer Churn Rate: ", customer_churn_rate, "%\n")
+  return (customer_churn_rate)
 }
-
+cat ("Customer Churn Rate: ", calculate_customer_churn_rate(), "%\n")
 calculate_customer_conversion_rate <- function() {
   prompts <- c(
                "Number of conversions: ",
