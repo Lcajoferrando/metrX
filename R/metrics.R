@@ -71,21 +71,17 @@ calculate_customer_satisfaction_score <- function() {
 
 calculate_net_promoter_score <- function() {
   prompts <- c(
-               "Number of promoters:",
-               "Number of passives: ",
-               "Number of detractors: ",
-               "Number of total responses: ")
-                 "Number of promoters: ",
-                 "Number of detractors: ",
+               "Total respondents: ",
+               "Number of promoters: ",
+               "Number of detractors: ")
   net_promoter_score_data <- sapply(prompts, get_metrics)
 
-  number_of_promoters <- net_promoter_score_data[1]
-  number_of_passives <- net_promoter_score_data[2]
+  total_respondents <- net_promoter_score_data[1]
+  number_of_promoters <- net_promoter_score_data[2]
   number_of_detractors <- net_promoter_score_data[3]
-  number_of_total_responses <- net_promoter_score_data[4]
 
-  net_promoter_score <- (number_of_promoters / number_of_total_responses) -
-                            (number_of_detractors / number_of_total_responses) * 100
+  net_promoter_score <- (number_of_promoters / total_respondents) -
+    (number_of_detractors / total_respondents) * 100
 
   cat("Net Promoter Score: ", net_promoter_score, "%\n")
 }
