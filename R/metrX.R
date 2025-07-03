@@ -1,3 +1,7 @@
+#' @export
+
+
+
 get_metrics <- function(prompt) {
   repeat {
     data <- suppressWarnings(as.numeric(readline(prompt)))
@@ -61,8 +65,8 @@ calculate_customer_satisfaction_score <- function() {
                "Total number of responses: ")
   customer_satisfaction_score_data <- sapply(prompts, get_metrics)
 
-  positive_responses <- customer_satisfaction_score[1]
-  total_responses <- customer_satisfaction_score[2]
+  positive_responses <- customer_satisfaction_score_data[1]
+  total_responses <- customer_satisfaction_score_data[2]
 
   customer_satisfaction_score <- (positive_responses / total_responses) * 100
 
