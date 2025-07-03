@@ -1,7 +1,4 @@
 #' @export
-
-
-
 get_metrics <- function(prompt) {
   repeat {
     data <- suppressWarnings(as.numeric(readline(prompt)))
@@ -13,6 +10,7 @@ get_metrics <- function(prompt) {
   }
 }
 
+#' @export
 calculate_customer_retention <- function() {
   prompts <- c(
                "Customers at start of the period: ",
@@ -30,6 +28,7 @@ calculate_customer_retention <- function() {
   return (customer_retention_rate)
 }
 
+#' @export
 calculate_customer_churn_rate <- function() {
   prompts <- c(
                "Lost customers: ",
@@ -44,6 +43,7 @@ calculate_customer_churn_rate <- function() {
   return (customer_churn_rate)
 }
 
+#' @export
 calculate_customer_conversion_rate <- function() {
   prompts <- c(
                "Number of conversions: ",
@@ -59,6 +59,7 @@ calculate_customer_conversion_rate <- function() {
   return (customer_conversion_rate)
 }
 
+#' @export
 calculate_customer_satisfaction_score <- function() {
   prompts <- c(
                "Number of positive responses: ",
@@ -73,6 +74,7 @@ calculate_customer_satisfaction_score <- function() {
   return (customer_satisfaction_score)
 }
 
+#' @export
 calculate_net_promoter_score <- function() {
   prompts <- c(
                "Total respondents: ",
@@ -87,12 +89,6 @@ calculate_net_promoter_score <- function() {
   net_promoter_score <- (number_of_promoters / total_respondents) -
     (number_of_detractors / total_respondents) * 100
 
-  return (net_promoter_score)
+  return(net_promoter_score)
 }
 
-cat("Customer Retention Rate: ", calculate_customer_retention(), "%\n")
-cat("Customer Churn Rate: ", calculate_customer_churn_rate(), "%\n")
-cat("Customer Conversion Rate: ", calculate_customer_conversion_rate(), "%\n")
-cat("Customer Satisfaction Score: ", calculate_customer_satisfaction_score(),
-    "%\n")
-cat("Net Promoter Score: ", calculate_net_promoter_score(), "%\n")
